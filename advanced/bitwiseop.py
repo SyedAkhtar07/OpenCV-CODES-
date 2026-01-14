@@ -1,0 +1,16 @@
+import cv2 as cv
+import numpy as np
+blank=np.zeros((400,400),dtype="uint8")
+rect=cv.rectangle(blank.copy(),(30,30),(370,370),255,-1)
+cir=cv.circle(blank.copy(),(200,200),200,255,-1)
+cv.imshow("Rectangle",rect)
+cv.imshow("Circle",cir)
+andd=cv.bitwise_and(rect,cir)
+cv.imshow("And",andd)
+orr=cv.bitwise_or(cir,rect)
+cv.imshow("Or",orr)
+xr=cv.bitwise_xor(cir,rect)
+cv.imshow("xor",xr)
+nt=cv.bitwise_not(rect)
+cv.imshow("Not",nt)
+cv.waitKey()

@@ -1,0 +1,15 @@
+import cv2 as cv
+import numpy as np
+img=cv.imread(r"F:\Akhtar study\Python\PyProjects\new\advanced\Photos\cats.jpg")
+hsv=cv.cvtColor(img,cv.COLOR_BGR2HSV)
+cv.imshow("Hsv Image",hsv)
+gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+cv.imshow("Gray Image",gray)
+print("Image shape: ",img.shape)
+print("Height:",img.shape[0])
+print("Width:",img.shape[1])
+print("Channel:",img.shape[2])
+print("Gray Image Shape:",gray.shape)
+print("Height:",gray.shape[0])
+print("Width:",gray.shape[1])
+cv.waitKey(0)
